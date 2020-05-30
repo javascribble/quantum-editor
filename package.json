@@ -1,0 +1,41 @@
+{
+    "name": "@javascribble/quantum-editor",
+    "description": "a web based game editor",
+    "version": "0.0.0",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@javascribble/quantum": "*",
+        "@javascribble/quantum-tree": "*",
+        "@javascribble/rollup-plugin-modulify": "*",
+        "@rollup/plugin-multi-entry": "*",
+        "@rollup/plugin-node-resolve": "*",
+        "npm-run-all": "*",
+        "rollup": "*",
+        "rollup-plugin-terser": "*",
+        "serve": "*"
+    },
+    "scripts": {
+        "serve": "serve ./",
+        "build": "rollup -c quantum-editor.rollup.config.js",
+        "watch": "rollup -w -c quantum-editor.rollup.config.js",
+        "start": "npm-run-all --parallel serve watch",
+        "postversion": "npm publish --access public"
+    },
+    "main": "./source/main.js",
+    "homepage": "https://github.com/javascribble/quantum-editor#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/javascribble/quantum-editor.git"
+    },
+    "bugs": {
+        "url": "https://github.com/javascribble/quantum-editor/issues"
+    },
+    "keywords": [
+        "game",
+        "editor"
+    ],
+    "files": [
+        "source/"
+    ]
+}
