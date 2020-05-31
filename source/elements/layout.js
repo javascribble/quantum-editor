@@ -1,7 +1,7 @@
-import { Component } from '@javascribble/quantum';
+import { Quantum } from '@javascribble/quantum';
 import { layout } from '../templates/layout.js';
 
-export class Layout extends Component {
+export class Layout extends Quantum {
     constructor() {
         super(layout);
     }
