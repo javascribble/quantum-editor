@@ -3,14 +3,14 @@ import { terser } from "rollup-plugin-terser";
 import multi from '@rollup/plugin-multi-entry';
 import resolve from '@rollup/plugin-node-resolve';
 
-const editor = './editor/main.js';
+const editor = './source/main.js';
 
 const bundles = [
 	{ name: 'editor', input: [editor] }
 ];
 
 const output = (name, plugins) => ({
-	file: `./build/quantum-editor.${name}.js`,
+	file: `./build/quantum-${name}.js`,
 	format: 'es',
 	plugins,
 	name

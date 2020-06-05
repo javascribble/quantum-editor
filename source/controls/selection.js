@@ -1,9 +1,11 @@
-import { queryAll, addListener, removeListener, dispatch } from '@javascribble/quantum';
-import { rectanglesOverlap } from '../../shared/geometry/shapes.js';
-import { distanceSquaredVector2Object } from '../../shared/geometry/vector2.js';
+import { on, off, dispatch, queryAll } from '@javascribble/quantum';
 import { mouseUpEvent, mouseMoveEvent, mouseDownEvent } from '../constants/events.js';
 import { show, hide, shown } from '../utilities/styles.js';
 import { SelectEvent } from '../events/select.js';
+
+// TODO: Find better place for these.
+const rectanglesOverlap = (a, b) => !(a.right < b.left || a.left > b.right || a.bottom < b.top || a.top > b.bottom);
+const distanceSquaredVector2Object = (v2a, v2b) => Math.pow(v2a.x - v2b.x, 2) + Math.pow(v2a.y - v2b.y, 2);
 
 export const enableSelection = (root, selection, selector = '[selectable]') => {
     const origin = {};
@@ -20,13 +22,13 @@ export const enableSelection = (root, selection, selector = '[selectable]') => {
     };
 
     const open = (event) => {
-        addListener(root, mouseMoveEvent, draw);
+        on(root, mouseMoveEvent, draw);
         origin.x = event.clientX;
         origin.y = event.clientY;
     };
 
     const close = (event) => {
-        removeListener(root, mouseMoveEvent, draw);
+        off(root, mouseMoveEvent, draw);
         if (shown(selection)) {
             hide(selection);
             const selectEvent = new SelectEvent(event);
@@ -39,6 +41,6 @@ export const enableSelection = (root, selection, selector = '[selectable]') => {
         }
     };
 
-    addListener(root, mouseDownEvent, open);
-    addListener(root, mouseUpEvent, close);
+    on(root, mouseDownEvent, open);
+    on(root, mouseUpEvent, close);
 };

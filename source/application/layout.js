@@ -1,4 +1,4 @@
-import { persistResize } from '../input/resizing.js';
+import { persistResize } from '../controls/resizing.js';
 
 export const configureLayout = (root) => {
     persistResize(root, '#objects', ['width'], ['300px']);

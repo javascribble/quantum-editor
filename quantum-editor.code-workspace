@@ -4,9 +4,6 @@
             "path": "source"
         },
         {
-            "path": "shared"
-        },
-        {
             "path": "test"
         }
     ]
