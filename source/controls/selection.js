@@ -1,4 +1,4 @@
-import { on, off, dispatch, queryAll } from '@javascribble/quantum';
+import { on, off, dispatch, queryAll } from '../../references/quantum.js';
 import { mouseUpEvent, mouseMoveEvent, mouseDownEvent } from '../constants/events.js';
 import { show, hide, shown } from '../utilities/styles.js';
 import { SelectEvent } from '../events/select.js';

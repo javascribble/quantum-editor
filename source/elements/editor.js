@@ -1,4 +1,4 @@
-import { Quantum, define } from '@javascribble/quantum';
+import { Quantum, define } from '../../references/quantum.js';
 import { configureLayout } from '../application/layout.js';
 import { configureProject } from '../application/project.js';
 import { configureServices } from '../application/services.js';

@@ -1,4 +1,4 @@
-import { query } from '@javascribble/quantum';
+import { query } from '../../references/quantum.js';
 import { enableSelection } from '../controls/selection.js';
 
 export const configureServices = (root) => {

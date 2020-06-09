@@ -1,4 +1,4 @@
-import { template, repeat, isArray } from '@javascribble/quantum';
+import { template, repeat, isArray } from '../../references/quantum.js';
 import { projectIcons, debugIcons, editorIcons, geometryIcons } from '../constants/icons.js';
 
 const flatten = code => isArray(code) ? code.join(';&#') : code;
@@ -64,10 +64,10 @@ export const editor = template(`
 </style>
 <quantum-layout>
     <div id="header" slot="top" class="bar">${headerIcons}</div>
-    <quantum-tree id="objects" slot="left" class="panel"></quantum-tree>
-    <div id="engine" slot="center" class="view"><slot></slot></div>
+    <div id="objects" slot="left" class="panel"></div>
+    <slot id="engine" slot="center" class="view"></slot>
     <div id="viewport" slot="center" class="view"></div>
-    <div id="properties" slot="right" class="panel">properties</div>
+    <div id="properties" slot="right" class="panel"></div>
     <div id="footer" slot="bottom" class="bar">${footerIcons}</div>
     <div id="selection" slot="widgets"></div>
 </quantum-layout>
