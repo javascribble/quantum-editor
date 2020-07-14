@@ -1,4 +1,4 @@
-import { on, off, dispatch, queryAll } from '../../references/quantum.js';
+import { on, off, dispatch, querySelectorAll } from '../../references/quantum.js';
 import { mouseUpEvent, mouseMoveEvent, mouseDownEvent } from '../constants/events.js';
 import { show, hide, shown } from '../utilities/styles.js';
 import { SelectEvent } from '../events/select.js';
@@ -33,7 +33,7 @@ export const enableSelection = (root, selection, selector = '[selectable]') => {
             hide(selection);
             const selectEvent = new SelectEvent(event);
             const box = selection.getBoundingClientRect();
-            queryAll(root, selector).forEach(element => {
+            querySelectorAll(root, selector).forEach(element => {
                 if (rectanglesOverlap(box, element.getBoundingClientRect())) {
                     dispatch(element, selectEvent);
                 }

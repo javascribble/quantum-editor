@@ -1,14 +1,15 @@
 {
     "name": "@javascribble/quantum-editor",
     "description": "a web first game editor",
-    "version": "0.0.1",
+    "version": "0.3.1",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+        "@javascribble/quantum": "^0.4.5",
+        "@javascribble/quantum-canvas": "^0.4.1",
+        "@javascribble/quantum-engine": "^0.4.1",
+        "@javascribble/quantum-tree": "^0.4.0"
+    },
     "devDependencies": {
-        "@javascribble/quantum": "^0.2.46",
-        "@javascribble/quantum-canvas": "^0.0.1",
-        "@javascribble/quantum-engine": "^0.0.3",
-        "@javascribble/quantum-tree": "^0.1.7",
         "live-server": "*"
     },
     "scripts": {

@@ -1,11 +1,9 @@
-import { Quantum, define } from '../../references/quantum.js';
+import { Component } from '../../references/quantum.js';
 import { configureLayout } from '../application/layout.js';
 import { configureProject } from '../application/project.js';
 import { configureServices } from '../application/services.js';
-import { editor } from '../templates/editor.js';
-import { Layout } from './layout.js';
 
-export class Editor extends Quantum {
+export class Editor extends Component {
     constructor() {
         super(editor);
 
@@ -14,7 +12,10 @@ export class Editor extends Quantum {
         configureProject(root);
         configureServices(root);
     }
+
+    static template = document.querySelector('#quantum-editor');
+
+    static attributes = [];
 }
 
-define(Editor);
-define(Layout);
+customElements.define('quantum-editor', Editor);

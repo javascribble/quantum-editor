@@ -1,4 +1,4 @@
-import { query } from '../../references/quantum.js';
+import { querySelector } from '../../references/quantum.js';
 import { saveStyles, loadStyles } from '../application/storage.js';
 
 const observables = new Map();
@@ -16,7 +16,7 @@ const resizeObserver = new ResizeObserver(entries => {
 });
 
 export const persistResize = (root, selector, properties, defaults) => {
-    const element = query(root, selector);
+    const element = querySelector(root, selector);
     loadStyles(element, properties, defaults);
     observables.set(element.id, { properties });
     resizeObserver.observe(element);
