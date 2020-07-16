@@ -1,3 +1,8 @@
+body {
+    visibility: hidden;
+    margin: 0;
+}
+
 :root {
 	--primary-background-color: grey;
 	--primary-highlight-color: lightgrey;
@@ -11,8 +16,4 @@
 	--secondary-border-color: black;	
 	
 	--primary-indention-units: 14;
-}
-
-body {
-    margin: 0;
 }
