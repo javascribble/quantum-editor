@@ -1,6 +1,7 @@
+import '/node_modules/@javascribble/quantum/source/main.js';
+import '/node_modules/@javascribble/quantum-tree/source/main.js';
+import '/node_modules/@javascribble/quantum-canvas/source/main.js';
+import '/node_modules/@javascribble/quantum-engine/source/main.js';
 import '/source/main.js';
-import '/references/quantum-tree.js';
-import '/references/quantum-canvas.js';
-import '/references/quantum-engine.js';
 
 document.body.style.visibility = 'visible';

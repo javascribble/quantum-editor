@@ -1,14 +1,11 @@
-import { Component, template } from '../../references/quantum.js';
 import html from '../templates/layout.js';
 
-export class Layout extends Component {
+export class Layout extends quantum.Component {
     constructor() {
         super();
     }
 
-    static template = template(html);
-
-    static attributes = [];
+    static template = quantum.template(html);
 }
 
-customElements.define('quantum-layout', Layout);
+quantum.define('quantum-layout', Layout);
