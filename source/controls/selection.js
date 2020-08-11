@@ -1,7 +1,5 @@
-import { on, off, dispatch, querySelectorAll } from '../../references/quantum.js';
-import { mouseUpEvent, mouseMoveEvent, mouseDownEvent } from '../constants/events.js';
-import { show, hide, shown } from '../utilities/styles.js';
-import { SelectEvent } from '../events/select.js';
+import { mouseUpEvent, mouseMoveEvent, mouseDownEvent } from '../constants/browser.js';
+import { shown, show, hide } from '../utilities/styles.js';
 
 // TODO: Find better place for these.
 const rectanglesOverlap = (a, b) => !(a.right < b.left || a.left > b.right || a.bottom < b.top || a.top > b.bottom);
@@ -22,25 +20,25 @@ export const enableSelection = (root, selection, selector = '[selectable]') => {
     };
 
     const open = (event) => {
-        on(root, mouseMoveEvent, draw);
+        root.addEventListener(mouseMoveEvent, draw);
         origin.x = event.clientX;
         origin.y = event.clientY;
     };
 
     const close = (event) => {
-        off(root, mouseMoveEvent, draw);
+        root.removeEventListener(mouseMoveEvent, draw);
         if (shown(selection)) {
             hide(selection);
-            const selectEvent = new SelectEvent(event);
+            const selectEvent = new Event('select');
             const box = selection.getBoundingClientRect();
-            querySelectorAll(root, selector).forEach(element => {
+            root.querySelectorAll(selector).forEach(element => {
                 if (rectanglesOverlap(box, element.getBoundingClientRect())) {
-                    dispatch(element, selectEvent);
+                    element.dispatchEvent(selectEvent);
                 }
             });
         }
     };
 
-    on(root, mouseDownEvent, open);
-    on(root, mouseUpEvent, close);
+    root.addEventListener(mouseDownEvent, open);
+    root.addEventListener(mouseUpEvent, close);
 };

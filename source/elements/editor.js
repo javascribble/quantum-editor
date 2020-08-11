@@ -5,7 +5,11 @@ import html from '../templates/editor.js';
 
 export class Editor extends quantum.Component {
     constructor() {
-        super(editor);
+        super();
+
+        configureLayout(this.shadowRoot);
+        configureProject(this.shadowRoot);
+        configureServices(this.shadowRoot);
     }
 
     static template = quantum.template(html);

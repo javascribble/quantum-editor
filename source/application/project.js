@@ -1,5 +1,6 @@
-import { querySelector } from '../../references/quantum.js';
-import { saveJson, loadJson } from './storage.js';
+const saveJson = (key, object) => localStorage.setItem(key, JSON.stringify(object));
+
+const loadJson = (key) => localStorage.hasOwnProperty(key) && JSON.parse(localStorage.getItem(key));
 
 export const configureProject = root => {
     const project = loadJson('project') || [];
