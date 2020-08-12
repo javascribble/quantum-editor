@@ -5,7 +5,7 @@ import { shown, show, hide } from '../utilities/styles.js';
 const rectanglesOverlap = (a, b) => !(a.right < b.left || a.left > b.right || a.bottom < b.top || a.top > b.bottom);
 const distanceSquaredVector2Object = (v2a, v2b) => Math.pow(v2a.x - v2b.x, 2) + Math.pow(v2a.y - v2b.y, 2);
 
-export const enableSelection = (root, selection, selector = '[selectable]') => {
+export const enableSelection = (root, selection, selector) => {
     const origin = {};
 
     const draw = (event) => {

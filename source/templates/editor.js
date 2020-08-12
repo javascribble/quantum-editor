@@ -26,7 +26,7 @@ export default `
     }
 
     #viewport {
-        box-shadow: 0px 0px 1px 1px var(--primary-highlight-color);
+        box-shadow: 0px 0px 1px 1px var(--secondary-highlight-color);
         justify-self: center;
         align-self: center;
         resize: both;
@@ -98,7 +98,7 @@ export default `
     <span class="icon" title="rate">&#9733;</span>
     <span class="icon" title="rate">&#9734;</span>
 </div>
-<div id="objects" class="panel"></div>
+<quantum-tree id="objects" class="panel"></quantum-tree>
 <div id="engine" class="view"><slot></slot></div>
 <div id="viewport" class="view"></div>
 <div id="properties" class="panel"></div>

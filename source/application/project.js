@@ -5,6 +5,9 @@ const loadJson = (key) => localStorage.hasOwnProperty(key) && JSON.parse(localSt
 export const configureProject = root => {
     const project = loadJson('project') || [];
 
-    // const tree = querySelector(root, 'quantum-tree');
-    // tree.add(project);
+    const branch = document.createElement('quantum-branch');
+    branch.name = "test";
+
+    const tree = root.querySelector('quantum-tree');
+    tree.appendChild(branch);
 };
