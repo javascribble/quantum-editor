@@ -99,8 +99,7 @@ export default `
     <span class="icon" title="rate">&#9734;</span>
 </div>
 <quantum-tree id="objects" class="panel"></quantum-tree>
-<div id="engine" class="view"><slot></slot></div>
-<div id="viewport" class="view"></div>
+<div id="viewport" class="view"><slot></slot></div>
 <div id="properties" class="panel"></div>
 <div id="footer" class="bar">
     <span class="icon" title="transform">&#10021;</span>
