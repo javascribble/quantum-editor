@@ -48,13 +48,6 @@ export default `
             direction: ltr;
         }
 
-    #selection {
-        border: 1px dashed var(--primary-highlight-color);
-        visibility: hidden;
-        position: absolute;
-        z-index: 1;        
-    }
-
     .bar {
         grid-column-start: span 2;
     }
@@ -87,5 +80,5 @@ export default `
 <div id="viewport" class="view"><slot></slot></div>
 <div id="properties" class="panel"></div>
 <div id="footer" class="bar"><slot name="footer"></slot></div>
-<div id="selection"></div>
+<quantum-region id="selection"></quantum-region>
 `;

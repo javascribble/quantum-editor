@@ -1,6 +1,5 @@
 import { configureLayout } from '../application/layout.js';
 import { configureProject } from '../application/project.js';
-import { configureServices } from '../application/services.js';
 import html from '../templates/editor.js';
 
 export class Editor extends quantum.Engine {
@@ -11,7 +10,6 @@ export class Editor extends quantum.Engine {
 
         configureLayout(this.shadowRoot);
         configureProject(this.shadowRoot);
-        configureServices(this.shadowRoot);
 
         this.#engine = this.shadowRoot.querySelector('quantum-engine');
     }
