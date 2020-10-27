@@ -2,7 +2,7 @@ import { configureLayout } from '../application/layout.js';
 import { configureProject } from '../application/project.js';
 import html from '../templates/editor.js';
 
-export class Editor extends quantum.Engine {
+export class Editor extends quantum.Component {
     #engine;
 
     constructor() {
@@ -19,11 +19,11 @@ export class Editor extends quantum.Engine {
     static get observedAttributes() { return ['src']; }
 
     attributeChangedCallback(attribute, previousValue, currentValue) {
-        fetch(currentValue).then(options => options.json()).then(this.integrate.bind(this));
+        fetch(currentValue).then(options => options.json()).then(this.load.bind(this));
     }
 
-    async integrate(options) {
-        await this.#engine.integrate(options);
+    async load(options) {
+        await this.#engine.load(options, Array.from(this.slots.values()).flat());
     }
 }
 
