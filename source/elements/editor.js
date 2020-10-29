@@ -7,10 +7,13 @@ export class Editor extends quantum.Component {
         super();
 
         configureLayout(this);
-        configureProject(this);
     }
 
     static template = quantum.template(html);
+
+    slotChangedCallback(slot, addedElements, deletedElements) {
+        configureProject(this, slot.assignedElements());
+    }
 }
 
 quantum.define('quantum-editor', Editor);
