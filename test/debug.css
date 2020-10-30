@@ -10,7 +10,3 @@ body {
     --primary-highlight-color: white;
     --secondary-highlight-color: chartreuse;
 }
-
-quantum-branch {
-    --active-color: black;
-}

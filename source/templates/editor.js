@@ -3,95 +3,50 @@ export default `
     * {
         user-select: none;
     }
-</style>
-<input id="load" type="file" />
-<button id="save">Save</button>
-<quantum-engine id="viewport" class="view"><slot></slot></quantum-engine>
-`;
-
-const text = `
-<style>
-    * {
-        box-sizing: border-box;
-        user-select: none;
-    }
 
     :host {
-        display: grid;
-        grid-template-rows: min-content auto min-content;
-        grid-template-columns: 50% 50%;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
         height: 100%;
     }
 
     #header {
-        background: linear-gradient(var(--secondary-background-color), var(--primary-background-color));
+        background: linear-gradient(var(--secondary-background-color), var(--tertiary-background-color));
     }
 
     #footer {
-        background: linear-gradient(var(--primary-background-color), var(--secondary-background-color));
+        background: linear-gradient(var(--tertiary-background-color), var(--secondary-background-color));
     }
 
-    #engine {
-        padding: 0 15px;
+    #project {
+        background: var(--secondary-background-color);
+        outline: none;
+        border: none;
+        width: 50%;
     }
 
     #viewport {
-        box-shadow: 0px 0px 1px 1px var(--secondary-highlight-color);
-        justify-self: center;
-        align-self: center;
+        background: var(--primary-background-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #engine {
         resize: both;
-        overflow: hidden;
-        max-width: calc(100% - 30px);
-    }
-
-    #objects {
-        grid-column: 1;
-    }
-
-    #properties {
-        grid-column: 2;
-        direction: rtl;
-        justify-self: end;
-    }
-
-        #properties:after {
-            direction: ltr;
-        }
-
-    .bar {
-        grid-column-start: span 2;
-    }
-
-        .bar > div {
-            padding: 0 15px 0 5px;
-            resize: horizontal;
-            overflow: auto;
-            float: left;
-        }
-
-    .panel {
-        background-color: var(--secondary-background-color);
-        white-space: nowrap;
-        resize: horizontal;
-        position: relative;
-        max-width: 100%;
         overflow: auto;
-        grid-row: 2;
-        z-index: 1;        
-    }
-
-    .view {
-        grid-row: 2;
-        grid-column: 1 / 3;
+        height: 50%;
+        width: 50%;
     }
 </style>
 <div id="header" class="bar">
-
+    <input id="load" type="file" />
+    <button id="save">Save</button>
 </div>
-<quantum-tree id="objects" class="panel"></quantum-tree>
-<quantum-engine id="viewport" class="view"><slot></slot></quantum-engine>
-<div id="properties" class="panel"></div>
+<quantum-layout>
+    <textarea id="project"></textarea>
+    <div id="viewport"><quantum-engine id="engine"><slot></slot></quantum-engine></div>
+</quantum-layout>
 <div id="footer" class="bar">
     <span class="icon" title="save">&#128427;</span>
     <span class="icon" title="export">&#128448;</span>

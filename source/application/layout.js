@@ -22,7 +22,6 @@ const persistResize = (element, properties, defaults) => {
 
 export const configureLayout = editor => {
     const root = editor.shadowRoot;
-    // persistResize(root.querySelector('#objects'), ['width'], ['300px']);
-    // persistResize(root.querySelector('#properties'), ['width'], ['300px']);
-    // persistResize(root.querySelector('#viewport'), ['width', 'height'], ['300px', '300px']);
+    persistResize(root.querySelector('#project'), ['width'], ['50%']);
+    persistResize(root.querySelector('#engine'), ['width', 'height'], ['50%', '50%']);
 };
