@@ -4,7 +4,7 @@
     "version": "0.5.3",
     "license": "MIT",
     "dependencies": {
-        "@javascribble/quantum": "*",
+        "@javascribble/quantum": "^1.0.0",
         "@javascribble/quantum-canvas": "*",
         "@javascribble/quantum-engine": "*",
         "@javascribble/quantum-keyboard": "*",
