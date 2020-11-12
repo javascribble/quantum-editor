@@ -4,13 +4,13 @@
     "version": "1.0.0",
     "license": "MIT",
     "dependencies": {
-        "@javascribble/quantum": "^1.0.0",
-        "@javascribble/quantum-canvas": "*",
-        "@javascribble/quantum-engine": "*",
-        "@javascribble/quantum-keyboard": "*",
-        "@javascribble/quantum-layout": "*",
-        "@javascribble/quantum-loader": "*",
-        "@javascribble/quantum-tabs": "*"
+        "@javascribble/quantum": "^1.0.5",
+        "@javascribble/quantum-canvas": "^1.0.3",
+        "@javascribble/quantum-engine": "^1.0.1",
+        "@javascribble/quantum-input": "^1.0.3",
+        "@javascribble/quantum-layout": "^1.0.0",
+        "@javascribble/quantum-loader": "^1.0.6",
+        "@javascribble/quantum-tabs": "^1.0.0"
     },
     "devDependencies": {
         "live-server": "*"
