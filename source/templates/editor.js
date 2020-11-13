@@ -45,7 +45,7 @@ export default `
 </div>
 <quantum-layout>
     <textarea id="project"></textarea>
-    <div id="viewport"><quantum-engine id="engine"><slot></slot></quantum-engine></div>
+    <div id="viewport"><div id="engine"><slot></slot></div></div>
 </quantum-layout>
 <div id="footer" class="bar">
     <span class="icon" title="save">&#128427;</span>

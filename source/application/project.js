@@ -1,16 +1,15 @@
 import { saveFile, loadFile } from '../utilities/files.js';
 import { saveJson, loadJson } from '../utilities/json.js';
 
-export const configureProject = (editor, plugins) => {
+export const configureProject = (editor, engine) => {
     const root = editor.shadowRoot;
     const load = root.querySelector('#load');
     const save = root.querySelector('#save');
-    const engine = root.querySelector('#engine');
     const project = root.querySelector('#project');
 
     const configuration = { project: loadJson('project') || {} };
     configuration.save = () => saveJson('project', configuration.project);
-    configuration.load = () => engine.load(configuration.project, plugins);
+    configuration.load = () => engine.run(configuration.project);
     configuration.load();
 
     project.onchange = () => { };

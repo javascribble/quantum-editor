@@ -13,7 +13,7 @@ export class Editor extends Component {
     static template = template(html);
 
     slotChangedCallback(slot, addedElements, deletedElements) {
-        configureProject(this, slot.assignedElements());
+        configureProject(this, slot.assignedElements()[0]);
     }
 }
 
