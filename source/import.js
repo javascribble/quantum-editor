@@ -1,1 +1,1 @@
-export const { Component, template, define } = quantum;
+export const { Component, template, define, clamp } = quantum;
