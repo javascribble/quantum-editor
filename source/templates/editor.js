@@ -35,8 +35,6 @@ export default `
     #engine {
         resize: both;
         overflow: auto;
-        height: 50%;
-        width: 50%;
     }
 </style>
 <div id="header" class="bar">
