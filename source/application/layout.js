@@ -1,4 +1,4 @@
-import { saveStyles, loadStyles } from '../utilities/styles.js';
+import { saveStyles, loadStyles } from '../storage/styles.js';
 import { clamp } from '../import.js';
 
 const observables = new Map();

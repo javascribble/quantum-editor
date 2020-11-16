@@ -1,5 +1,5 @@
-import { saveFile, loadFile } from '../utilities/files.js';
-import { saveJson, loadJson } from '../utilities/json.js';
+import { saveFile, loadFile } from '../storage/files.js';
+import { saveJson, loadJson } from '../storage/json.js';
 
 export const configureProject = (editor, engine) => {
     const root = editor.shadowRoot;
