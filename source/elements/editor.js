@@ -6,14 +6,9 @@ import html from '../templates/editor.js';
 export class Editor extends Component {
     static template = template(html);
 
-    constructor() {
-        super();
-
-        //configureLayout(this.shadowRoot, '');
-    }
-
     slotChangedCallback(slot, addedElements, deletedElements) {
-        //configureProject(this.shadowRoot, );
+        //configureProject(this.shadowRoot,  );
+        //configureLayout(this.shadowRoot, '');
     }
 }
 
