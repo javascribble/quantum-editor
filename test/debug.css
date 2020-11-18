@@ -4,9 +4,5 @@ body {
 }
 
 :root {
-	--primary-background-color: grey;
-	--secondary-background-color: lightgrey;
-	--tertiary-background-color: darkgrey;
-    --primary-highlight-color: white;
-    --secondary-highlight-color: chartreuse;
+	--background-color: grey;
 }

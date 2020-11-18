@@ -4,16 +4,16 @@ import { configureProject } from '../application/project.js';
 import html from '../templates/editor.js';
 
 export class Editor extends Component {
+    static template = template(html);
+
     constructor() {
         super();
 
-        configureLayout(this);
+        //configureLayout(this.shadowRoot, '');
     }
 
-    static template = template(html);
-
     slotChangedCallback(slot, addedElements, deletedElements) {
-        configureProject(this, slot.assignedElements()[0]);
+        //configureProject(this.shadowRoot, );
     }
 }
 

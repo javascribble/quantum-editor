@@ -1,8 +1,7 @@
-import { saveFile, loadFile } from '../storage/files.js';
-import { saveJson, loadJson } from '../storage/json.js';
+import { saveFile, loadFile } from '../utilities/files.js';
+import { saveJson, loadJson } from '../utilities/json.js';
 
-export const configureProject = (editor, engine) => {
-    const root = editor.shadowRoot;
+export const configureProject = (root, plugins) => {
     const load = root.querySelector('#load');
     const save = root.querySelector('#save');
     const project = root.querySelector('#project');
@@ -23,6 +22,4 @@ export const configureProject = (editor, engine) => {
             });
         }
     };
-
-    Object.assign(editor, configuration);
 };

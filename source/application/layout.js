@@ -1,6 +1,3 @@
-import { saveStyles, loadStyles } from '../storage/styles.js';
-import { clamp } from '../import.js';
-
 const observables = new Map();
 
 const resizeObserver = new ResizeObserver(entries => {
@@ -15,28 +12,15 @@ const resizeObserver = new ResizeObserver(entries => {
     }
 });
 
-const persistResize = (element, properties, defaults) => {
-    loadStyles(element, properties, defaults);
+const saveLayout = (elements) => {
     observables.set(element.id, { properties });
     resizeObserver.observe(element);
 };
 
-const enableScaling = (element, target, factor = 1.2) => {
-    let scale = 1;
-    const applyScale = event => {
-        target.style.transform = `scale(${scale = clamp(event.deltaY < 0 ? scale * factor : scale / factor, 0, 2)})`;
-        //target.style.transformOrigin = "50% 50% 0px";
-    };
+const loadLayout = (elements) => {
 
-    element.addEventListener('wheel', applyScale, { passive: true });
 };
 
-const enablePanning = (element, target) => {
-};
-
-export const configureLayout = editor => {
-    const root = editor.shadowRoot;
-    enableScaling(root.querySelector('#viewport'), root.querySelector('#engine'));
-    persistResize(root.querySelector('#project'), ['width'], ['50%']);
-    persistResize(root.querySelector('#engine'), ['width', 'height'], ['50%', '50%']);
+export const configureLayout = (root, selector) => {
+    const elements = root.querySelectorAll(selector);
 };
