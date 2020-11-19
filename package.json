@@ -10,6 +10,7 @@
         "@javascribble/quantum-input": "^1.0.5",
         "@javascribble/quantum-layout": "^1.0.3",
         "@javascribble/quantum-loader": "^1.0.7",
+        "@javascribble/quantum-region": "^1.0.2",
         "@javascribble/quantum-tabs": "^1.0.3"
     },
     "devDependencies": {
