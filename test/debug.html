@@ -5,11 +5,22 @@
     </head>
     <body>
         <quantum-editor>
-            <quantum-engine>
-                <quantum-loader></quantum-loader>
-                <quantum-canvas></quantum-canvas>
-                <quantum-input></quantum-input>
-            </quantum-engine>
+            <quantum-layout>
+                <quantum-tabs dock="top" style="width: 30%">
+                    <div id="hierarchy">asdf</div>
+                </quantum-tabs>
+                <quantum-tabs dock="top">
+                    <quantum-engine id="engine" src="game.json">
+                        <quantum-loader></quantum-loader>
+                        <quantum-canvas></quantum-canvas>
+                        <quantum-input></quantum-input>
+                    </quantum-engine>
+                </quantum-tabs>
+                <quantum-tabs dock="top" style="width: 30%">
+                    <div id="properties">asdf</div>
+                </quantum-tabs>
+            </quantum-layout>
+            <quantum-region slot="widget"></quantum-region>
         </quantum-editor>
     </body>
 </html>

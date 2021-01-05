@@ -1,25 +1,25 @@
 export default async (api, options) => {
-    api.createSystem({
-        validate: entity => 'camera' in entity,
-        update: (entities, time) => {
-            for (const entity of entities) {
-                api.drawSprite(entity);
-            }
-        }
-    });
+    quantum.enableLoaderPlugin(api, options);
+    quantum.enableTilesPlugin(api, options);
 
-    api.createSystem({
+    api.attachSystem({
         validate: entity => 'player' in entity,
         update: (entities, time) => {
             for (const entity of entities) {
-                if (api.getButton('ArrowDown')) {
-                    entity.dx += 10;
+                if (api.getButton('ArrowUp')) {
+                    entity.dy -= 5;
+                } else if (api.getButton('ArrowDown')) {
+                    entity.dy += 5;
+                } else if (api.getButton('ArrowLeft')) {
+                    entity.dx -= 5;
+                } else if (api.getButton('ArrowRight')) {
+                    entity.dx += 5;
                 }
             }
         }
     });
 
-    api.createSystem({
+    api.attachSystem({
         validate: entity => 'image' in entity,
         update: (entities, time) => {
             for (const entity of entities) {
@@ -28,12 +28,21 @@ export default async (api, options) => {
         }
     });
 
-    api.createSystem({
-        validate: entity => 'divisor' in entity,
+    api.attachSystem({
+        validate: entity => 'map' in entity,
         construct: entity => {
-            api.calculateTiles(entity.children, entity.divisor);
-        },
-        update: (entities, time) => {
+            const tiles = [];
+            const divisor = entity.divisor;
+            const grassTile = entity.children[0];
+            for (let i = 0; i < divisor; i++) {
+                for (let ii = 0; ii < divisor; ii++) {
+                    const grassTileClone = { ...grassTile };
+                    api.attachEntity(grassTileClone);
+                    tiles.push(grassTileClone);
+                }
+            }
+
+            api.calculateTilemap(tiles, divisor);
         }
     });
 

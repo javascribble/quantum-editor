@@ -3,6 +3,18 @@ body {
     margin: 0;
 }
 
-:root {
-	--background-color: grey;
+quantum-editor {
+    background-color: lightgrey;
+}
+
+quantum-tab {    
+    --padding: 0.2em 0.3em;
+}
+
+quantum-tab[active] {
+    --background-color: darkgrey;
+}
+
+quantum-region {
+    --border: 1px dashed white;
 }

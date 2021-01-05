@@ -12,12 +12,12 @@ const resizeObserver = new ResizeObserver(entries => {
     }
 });
 
-const saveLayout = (elements) => {
+const saveLayout = element => {
     observables.set(element.id, { properties });
     resizeObserver.observe(element);
 };
 
-const loadLayout = (elements) => {
+const loadLayout = element => {
 
 };
 
