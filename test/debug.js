@@ -1,11 +1,11 @@
-import '/node_modules/@javascribble/quantum/source/export.js';
-import '/node_modules/@javascribble/quantum-tabs/source/export.js';
-import '/node_modules/@javascribble/quantum-layout/source/export.js';
-import '/node_modules/@javascribble/quantum-region/source/export.js';
-import '/node_modules/@javascribble/quantum-engine/source/export.js';
-import '/node_modules/@javascribble/quantum-canvas/source/export.js';
-import '/node_modules/@javascribble/quantum-loader/source/export.js';
-import '/node_modules/@javascribble/quantum-input/source/export.js';
-import '/source/export.js';
+import '/node_modules/@javascribble/quantum/source/main.js';
+import '/node_modules/@javascribble/quantum-tabs/source/main.js';
+import '/node_modules/@javascribble/quantum-layout/source/main.js';
+import '/node_modules/@javascribble/quantum-region/source/main.js';
+import '/node_modules/@javascribble/quantum-engine/source/main.js';
+import '/node_modules/@javascribble/quantum-canvas/source/main.js';
+import '/node_modules/@javascribble/quantum-loader/source/main.js';
+import '/node_modules/@javascribble/quantum-input/source/main.js';
+import '/source/main.js';
 
 document.body.style.visibility = 'visible';

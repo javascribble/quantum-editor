@@ -1,4 +1,3 @@
-import { Component, template, define } from '../import.js';
 import { configureLayout } from '../application/layout.js';
 import { configureProject } from '../application/project.js';
 import html from '../templates/editor.js';
