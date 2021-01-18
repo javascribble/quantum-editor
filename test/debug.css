@@ -3,6 +3,12 @@ body {
     margin: 0;
 }
 
+button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 quantum-editor {
     background-color: lightgrey;
 }
