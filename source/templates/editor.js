@@ -5,12 +5,19 @@ export default `
         flex-direction: column;
         height: 100%;
     }
+
+    #widgets {
+        position: absolute;
+    }
 </style>
 <div id="header">
     <input id="load" type="file" />
     <button id="save">Save</button>
+    <slot name="header"></slot>
 </div>
-<slot></slot>
+<quantum-layout id="layout">
+    <slot></slot>
+</quantum-layout>
 <div id="footer">
 	<span class="icon" title="save">&#128427;</span>
 	<span class="icon" title="export">&#128448;</span>
@@ -24,7 +31,11 @@ export default `
 	<span class="icon" title="edit">&#9998;</span>
 	<span class="icon" title="transform">&#10021;</span>
 	<span class="icon" title="rotate">&#128472;</span>
-	<span class="icon" title="scale">&#9878;</span>
+    <span class="icon" title="scale">&#9878;</span>
+    <slot name="footer"></slot>
 </div>
-<slot name="widget"></slot>
+<div id="widgets">
+    <quantum-region ></quantum-region>
+    <slot name="widget"></slot>
+</div>
 `;
