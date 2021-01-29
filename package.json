@@ -4,15 +4,15 @@
     "version": "1.2.4",
     "license": "MIT",
     "dependencies": {
-        "@javascribble/quantum": "^1.2.3",
-        "@javascribble/quantum-canvas": "^1.2.0",
-        "@javascribble/quantum-context": "^1.2.0",
-        "@javascribble/quantum-engine": "^1.2.2",
-        "@javascribble/quantum-input": "^1.2.0",
-        "@javascribble/quantum-layout": "^1.2.0",
-        "@javascribble/quantum-region": "^1.2.0",
-        "@javascribble/quantum-tabs": "^1.2.0",
-        "@javascribble/quantum-tree": "^1.2.0"
+        "@javascribble/quantum": "^1.2.4",
+        "@javascribble/quantum-canvas": "^1.2.1",
+        "@javascribble/quantum-context": "^1.2.1",
+        "@javascribble/quantum-engine": "^1.2.4",
+        "@javascribble/quantum-input": "^1.2.1",
+        "@javascribble/quantum-layout": "^1.2.1",
+        "@javascribble/quantum-region": "^1.2.1",
+        "@javascribble/quantum-tabs": "^1.2.1",
+        "@javascribble/quantum-tree": "^1.2.1"
     },
     "devDependencies": {
         "live-server": "*"
