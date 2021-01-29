@@ -9,22 +9,19 @@ import '/node_modules/@javascribble/quantum-tree/source/main.js';
 import '/node_modules/@javascribble/quantum-engine/source/main.js';
 import '/source/main.js';
 
-const { Engine, Component, template, define } = quantum;
+const html = `
+    <style>
+        button {
+            position: absolute;
+            top: 0;
+            right: 0; 
+        }
+    </style>
+    <button>reset</button>
+`;
 
-define('quantum-ui', class UI extends Component {
-    static template = template(`
-        <style>
-            button {
-                position: absolute;
-                top: 0;
-                right: 0; 
-            }
-        </style>
-        <button>reset</button>
-    `);
-});
-
-define('quantum-game', class Game extends Engine {
+class UI extends Quantum { }
+class Game extends Quantum.Engine {
     #ui = document.createElement('quantum-ui');
 
     constructor() {
@@ -159,6 +156,9 @@ define('quantum-game', class Game extends Engine {
             return this.isConnected;
         };
     }
-});
+}
+
+UI.define('quantum-ui', html);
+Game.define('quantum-game');
 
 document.body.style.visibility = 'visible';

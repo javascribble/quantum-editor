@@ -2,10 +2,7 @@ import { configureLayout } from '../application/layout.js';
 import { configureProject } from '../application/project.js';
 import html from '../templates/editor.js';
 
-const { Component, template, define } = quantum;
-
-export class Editor extends Component {
-    static template = template(html);
+export class Editor extends Quantum {
 }
 
-define('quantum-editor', Editor);
+Editor.define('quantum-editor', html);
