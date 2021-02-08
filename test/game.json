@@ -1,0 +1,87 @@
+{
+    "resourceRoot": "/test/resources",
+    "resources": [
+        "character.png",
+        "map.png"
+    ],
+    "prototypeRoot": 0,
+    "prototypes": [
+        [
+            {
+                "scene": 0,
+                "scenes": [
+                    5
+                ]
+            },
+            [],
+            [
+                "scenes"
+            ],
+            []
+        ],
+        [
+            {
+                "source": 0,
+                "sx": 0,
+                "sy": 0,
+                "sw": 64,
+                "sh": 64
+            },
+            [
+                "source"
+            ],
+            [],
+            []
+        ],
+        [
+            {
+                "sheet": 1,
+                "size": 64
+            },
+            [
+                "sheet"
+            ],
+            [],
+            []
+        ],
+        [
+            {
+                "tileset": 2,
+                "divisor": 10
+            },
+            [],
+            [
+                "tileset"
+            ],
+            []
+        ],
+        [
+            {
+                "player": {
+                    "dx": 100,
+                    "dy": 100
+                },
+                "dw": 64,
+                "dh": 64
+            },
+            [],
+            [],
+            [
+                1
+            ]
+        ],
+        [
+            {
+                "children": [
+                    3,
+                    4
+                ]
+            },
+            [],
+            [
+                "children"
+            ],
+            []
+        ]
+    ]
+}

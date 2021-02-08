@@ -1,3 +1,1 @@
-import { Editor } from './elements/editor.js';
-
-Quantum.Editor = Editor;
+import './elements/editor.js';

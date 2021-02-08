@@ -5,17 +5,19 @@
     </head>
     <body>
         <quantum-editor>
-            <quantum-tabs dock="top">
-                <quantum-game id="engine">
-                    <quantum-canvas></quantum-canvas>
-                    <quantum-input></quantum-input>
-                </quantum-game>
-                <quantum-tree id="prototypes" name="root"></quantum-tree>
-                <quantum-tree id="entities" name="root"></quantum-tree>
-                <div id="components"></div>
-                <textarea id="systems"></textarea>
-                <textarea id="interface"></textarea>
-            </quantum-tabs>
+            <quantum-layout id="layout">
+                <quantum-tabs dock="top">
+                    <quantum-game id="engine" src="/test/game.json">
+                        <quantum-canvas></quantum-canvas>
+                        <quantum-input></quantum-input>
+                    </quantum-game>
+                    <quantum-tree id="prototypes" name="root"></quantum-tree>
+                    <quantum-tree id="entities" name="root"></quantum-tree>
+                    <div id="components"></div>
+                    <textarea id="systems"></textarea>
+                    <textarea id="interface"></textarea>
+                </quantum-tabs>
+            </quantum-layout>
         </quantum-editor>
     </body>
 </html>

@@ -15,9 +15,7 @@ export default `
     <button id="save">Save</button>
     <slot name="header"></slot>
 </div>
-<quantum-layout id="layout">
-    <slot></slot>
-</quantum-layout>
+<slot></slot>
 <div id="footer">
 	<span class="icon" title="save">&#128427;</span>
 	<span class="icon" title="export">&#128448;</span>
