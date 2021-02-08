@@ -3,6 +3,8 @@ import '/node_modules/@javascribble/quantum-tabs/source/main.js';
 import '/node_modules/@javascribble/quantum-layout/source/main.js';
 import '/node_modules/@javascribble/quantum-region/source/main.js';
 import '/node_modules/@javascribble/quantum-canvas/source/main.js';
+import '/node_modules/@javascribble/quantum-canvas/source/plugins/drawing.js';
+import '/node_modules/@javascribble/quantum-canvas/source/adapters/engine.js';
 import '/node_modules/@javascribble/quantum-input/source/main.js';
 import '/node_modules/@javascribble/quantum-context/source/main.js';
 import '/node_modules/@javascribble/quantum-tree/source/main.js';
