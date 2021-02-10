@@ -26,3 +26,5 @@ class Game extends Engine {
 }
 
 Game.define('quantum-game');
+
+document.querySelector('quantum-canvas').addEventListener('resize', console.log);
