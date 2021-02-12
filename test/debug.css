@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+quantum-game {
+    height: 300px;
+}
+
 quantum-editor {
     background-color: lightgrey;
 }
