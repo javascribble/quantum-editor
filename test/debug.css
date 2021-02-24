@@ -3,8 +3,10 @@ body {
     margin: 0;
 }
 
-quantum-engine {
-    height: 300px;
+button {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 quantum-editor {
