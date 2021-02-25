@@ -4,8 +4,8 @@ import { architecturePlugin } from '/node_modules/@javascribble/quantum-engine/s
 const gamePlugin = async engine => {
     const { canvas, input, animation, entities, systems } = engine;
 
-    canvas.setResolution(800, 600);
-    // canvas.addEventListener('resize', event => canvas.setResolution());
+    canvas.setResolution();
+    canvas.addEventListener('resize', event => canvas.setResolution());
 
     systems.add({
         entities: [],

@@ -9,6 +9,10 @@ button {
     right: 0;
 }
 
+quantum-engine {
+    height: 300px;
+}
+
 quantum-editor {
     background-color: lightgrey;
 }
