@@ -9,20 +9,20 @@ button {
     right: 0;
 }
 
-quantum-engine {
-    height: 300px;
+div[slot="tabs"] {    
+    padding: 0.2em 0.3em;
+}
+
+div[slot="tabs"][active] {
+    background: darkgrey;
+}
+
+quantum-layout {
+    height: 100%;
 }
 
 quantum-editor {
-    background-color: lightgrey;
-}
-
-quantum-tab {    
-    --padding: 0.2em 0.3em;
-}
-
-quantum-tab[active] {
-    --background-color: darkgrey;
+    background: lightgrey;
 }
 
 quantum-region {

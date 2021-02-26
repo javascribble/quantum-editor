@@ -1,5 +1,6 @@
 import '/node_modules/@javascribble/quantum/source/main.js';
 import '/node_modules/@javascribble/quantum-tabs/source/main.js';
+import '/node_modules/@javascribble/quantum-tabs/source/utilities/hack.js';
 import '/node_modules/@javascribble/quantum-layout/source/main.js';
 import '/node_modules/@javascribble/quantum-region/source/main.js';
 import '/node_modules/@javascribble/quantum-canvas/source/main.js';
