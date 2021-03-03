@@ -11,8 +11,14 @@ import '/node_modules/@javascribble/quantum-tree/source/main.js';
 import '/node_modules/@javascribble/quantum-engine/source/main.js';
 import '/node_modules/@javascribble/quantum-engine/source/extensions/prototypes.js';
 import '/node_modules/@javascribble/quantum-engine/source/extensions/resources.js';
+import '/node_modules/@javascribble/quantum-engine/source/plugins/animation.js';
+import '/node_modules/@javascribble/quantum-engine/source/plugins/architecture.js';
 import '/node_modules/@javascribble/quantum-engine/source/utilities/loaders.js';
 import '/source/main.js';
+import '/source/extensions/prototypes.js';
+import '/source/extensions/resources.js';
+import '/source/plugins/animation.js';
+import '/source/plugins/architecture.js';
 import '/test/game.js';
 
 document.body.style.visibility = 'visible';

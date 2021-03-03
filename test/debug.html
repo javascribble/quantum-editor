@@ -4,27 +4,19 @@
         <script type="module" src="/test/debug.js"></script>
     </head>
     <body>
-        <quantum-editor>
-            <quantum-layout id="layout">
-                <quantum-tabs dock="top" active="engine">
-                    <div content="engine" slot="tabs" draggable="true">engine</div>
-                    <div content="prototypes" slot="tabs" draggable="true">prototypes</div>
-                    <div content="entities" slot="tabs" draggable="true">entities</div>
-                    <div content="components" slot="tabs" draggable="true">components</div>
-                    <div content="systems" slot="tabs" draggable="true">systems</div>
-                    <div content="interface" slot="tabs" draggable="true">interface</div>
-                    <quantum-engine id="engine" src="/test/game.json">
-                        <quantum-canvas id="canvas"></quantum-canvas>
-                        <quantum-input id="input"></quantum-input>
-                        <button id="ui">reset</button>
-                    </quantum-engine>
-                    <quantum-tree id="prototypes" name="root"></quantum-tree>
-                    <quantum-tree id="entities" name="root"></quantum-tree>
-                    <div id="components"></div>
-                    <div id="systems"></div>
-                    <div id="interface"></div>
-                </quantum-tabs>
-            </quantum-layout>
-        </quantum-editor>
+        <div id="resize">
+            <quantum-editor>
+                <quantum-layout id="layout">
+                    <quantum-tabs dock="top" active="engine">
+                        <div content="engine" slot="tabs" draggable="true">engine</div>
+                        <quantum-engine id="engine" src="/test/game.json">
+                            <quantum-canvas id="canvas"></quantum-canvas>
+                            <quantum-input id="input"></quantum-input>
+                            <button id="ui">reset</button>
+                        </quantum-engine>
+                    </quantum-tabs>
+                </quantum-layout>
+            </quantum-editor>
+        </div>
     </body>
 </html>

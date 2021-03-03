@@ -1,7 +1,4 @@
-import { animationPlugin } from '/node_modules/@javascribble/quantum-engine/source/plugins/animation.js';
-import { architecturePlugin } from '/node_modules/@javascribble/quantum-engine/source/plugins/architecture.js';
-
-const gamePlugin = async engine => {
+document.querySelector('quantum-engine').plugins.push(async engine => {
     const { canvas, input, animation, entities, systems } = engine;
 
     canvas.setResolution();
@@ -73,14 +70,9 @@ const gamePlugin = async engine => {
     children.push(scene.player.sprite);
     scene.children = children;
 
-    engine.querySelector('button').addEventListener('click', event => {
-        Object.assign(scene.player.sprite, scene.player.spawn)
-    });
+    // engine.ui.querySelector('button').addEventListener('click', event => {
+    //     Object.assign(scene.player.sprite, scene.player.spawn)
+    // });
 
     animation.start();
-};
-
-const { plugins } = document.querySelector('quantum-engine');
-plugins.push(animationPlugin);
-plugins.push(architecturePlugin);
-plugins.push(gamePlugin);
+});

@@ -3,7 +3,12 @@ body {
     margin: 0;
 }
 
-button {
+#resize {
+    resize: both;
+    overflow: auto;
+}
+
+#ui {
     position: absolute;
     top: 0;
     right: 0;
@@ -17,14 +22,10 @@ div[slot="tabs"][active] {
     background: darkgrey;
 }
 
-quantum-layout {
-    height: 100%;
-}
-
 quantum-editor {
     background: lightgrey;
 }
 
-quantum-region {
-    --border: 1px dashed white;
+quantum-engine {
+    height: 300px;
 }
