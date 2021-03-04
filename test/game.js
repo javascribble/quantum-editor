@@ -1,9 +1,6 @@
 document.querySelector('quantum-engine').plugins.push(async engine => {
     const { canvas, input, animation, entities, systems } = engine;
 
-    canvas.setResolution();
-    canvas.addEventListener('resize', event => canvas.setResolution());
-
     systems.add({
         entities: [],
         validate: entity => 'player' in entity,
@@ -71,7 +68,7 @@ document.querySelector('quantum-engine').plugins.push(async engine => {
     scene.children = children;
 
     // engine.ui.querySelector('button').addEventListener('click', event => {
-    //     Object.assign(scene.player.sprite, scene.player.spawn)
+    //     Object.assign(scene.player.sprite, scene.player.spawn);
     // });
 
     animation.start();
