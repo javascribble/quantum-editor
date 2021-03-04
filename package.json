@@ -1,7 +1,7 @@
 {
     "name": "@javascribble/quantum-editor",
     "description": "a web first game editor",
-    "version": "1.2.9",
+    "version": "1.2.10",
     "license": "MIT",
     "dependencies": {
         "@javascribble/quantum": "^1.2.12",
