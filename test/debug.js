@@ -1,6 +1,5 @@
 import '/node_modules/@javascribble/quantum/source/main.js';
 import '/node_modules/@javascribble/quantum-tabs/source/main.js';
-import '/node_modules/@javascribble/quantum-tabs/source/utilities/hack.js';
 import '/node_modules/@javascribble/quantum-layout/source/main.js';
 import '/node_modules/@javascribble/quantum-region/source/main.js';
 import '/node_modules/@javascribble/quantum-canvas/source/main.js';
@@ -14,11 +13,11 @@ import '/node_modules/@javascribble/quantum-engine/source/extensions/resources.j
 import '/node_modules/@javascribble/quantum-engine/source/plugins/animation.js';
 import '/node_modules/@javascribble/quantum-engine/source/plugins/architecture.js';
 import '/node_modules/@javascribble/quantum-engine/source/utilities/loaders.js';
-import '/source/main.js';
 import '/source/extensions/prototypes.js';
 import '/source/extensions/resources.js';
 import '/source/plugins/animation.js';
 import '/source/plugins/architecture.js';
+import '/source/main.js';
 import '/test/game.js';
 
 document.body.style.visibility = 'visible';

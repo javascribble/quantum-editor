@@ -7,9 +7,9 @@
         <div id="resize">
             <quantum-editor>
                 <quantum-layout id="layout">
-                    <quantum-tabs dock="top" active="engine">
-                        <div content="engine" slot="tabs" draggable="true">engine</div>
-                        <quantum-engine id="engine" src="/test/game.json">
+                    <quantum-tabs dock="top">
+                        <div tab="engine" slot="tabs" draggable="true">engine</div>
+                        <quantum-engine tab="engine" src="/test/game.json">
                             <quantum-canvas id="canvas"></quantum-canvas>
                             <quantum-input id="input"></quantum-input>
                             <button id="ui">reset</button>
