@@ -35,9 +35,6 @@ document.querySelector('quantum-engine').plugins.push({
                 }
 
                 Object.assign(sprite, spawn);
-                engine.querySelector('button').addEventListener('click', event => {
-                    Object.assign(sprite, spawn);
-                });
 
                 children.push(sprite);
                 entity.children = children;

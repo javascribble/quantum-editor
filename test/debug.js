@@ -6,6 +6,7 @@ import '/node_modules/@javascribble/quantum-canvas/source/main.js';
 import '/node_modules/@javascribble/quantum-canvas/source/extensions/drawing.js';
 import '/node_modules/@javascribble/quantum-input/source/main.js';
 import '/node_modules/@javascribble/quantum-context/source/main.js';
+import '/node_modules/@javascribble/quantum-menu/source/main.js';
 import '/node_modules/@javascribble/quantum-tree/source/main.js';
 import '/node_modules/@javascribble/quantum-engine/source/main.js';
 import '/node_modules/@javascribble/quantum-engine/source/extensions/prototypes.js';

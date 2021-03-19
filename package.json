@@ -5,16 +5,17 @@
     "license": "MIT",
     "dependencies": {
         "@javascribble/quantum": "^1.2.12",
-        "@javascribble/quantum-context": "^1.2.2",		
+        "@javascribble/quantum-context": "^1.2.2",
         "@javascribble/quantum-engine": "^1.2.13",
         "@javascribble/quantum-input": "^1.2.2",
         "@javascribble/quantum-layout": "^1.2.3",
+        "@javascribble/quantum-menu": "^1.0.1",
         "@javascribble/quantum-region": "^1.2.2",
         "@javascribble/quantum-tabs": "^1.2.3",
         "@javascribble/quantum-tree": "^1.2.2"
     },
     "devDependencies": {
-        "@javascribble/quantum-canvas": "^1.2.13",	
+        "@javascribble/quantum-canvas": "^1.2.13",
         "@javascribble/rollup-quantum-build": "^1.1.1",
         "live-server": "*"
     },

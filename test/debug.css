@@ -14,16 +14,12 @@ body {
     right: 0;
 }
 
-div[slot="tabs"] {    
+div[slot="tabs"] {
     padding: 0.2em 0.3em;
 }
 
 div[slot="tabs"][active] {
     background: darkgrey;
-}
-
-quantum-editor {
-    background: lightgrey;
 }
 
 quantum-engine {
