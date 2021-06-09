@@ -1,26 +1,25 @@
 {
     "name": "@javascribble/quantum-editor",
     "description": "a web first game editor",
-    "version": "1.2.11",
+    "version": "1.4.0",
     "license": "MIT",
     "dependencies": {
-        "@javascribble/quantum": "^1.2.12",
-        "@javascribble/quantum-context": "^1.2.2",
-        "@javascribble/quantum-engine": "^1.2.13",
-        "@javascribble/quantum-input": "^1.2.2",
-        "@javascribble/quantum-layout": "^1.2.3",
-        "@javascribble/quantum-menu": "^1.0.1",
-        "@javascribble/quantum-region": "^1.2.2",
-        "@javascribble/quantum-tabs": "^1.2.3",
-        "@javascribble/quantum-tree": "^1.2.2"
+        "@javascribble/quantum": "^1.5.0",
+        "@javascribble/quantum-context": "^1.5.0",
+        "@javascribble/quantum-engine": "^1.5.0",
+        "@javascribble/quantum-input": "^1.5.0",
+        "@javascribble/quantum-layout": "^1.5.0",
+        "@javascribble/quantum-menu": "^1.5.0",
+        "@javascribble/quantum-region": "^1.5.0",
+        "@javascribble/quantum-tabs": "^1.5.0",
+        "@javascribble/quantum-tree": "^1.5.0"
     },
     "devDependencies": {
-        "@javascribble/quantum-canvas": "^1.2.13",
-        "@javascribble/rollup-quantum-build": "^1.1.1",
+        "@javascribble/quantum-canvas": "^1.5.0",
         "live-server": "*"
     },
     "scripts": {
-        "build": "node ./node_modules/@javascribble/rollup-quantum-build/source/main.js ./source/main.js ./build",
+        "build": "cd ../rollup-quantum-build && npm start ../quantum-editor/source/main.js ../quantum-editor/build",
         "start": "live-server --open=/test/debug.html",
         "postversion": "npm publish --access public"
     },
