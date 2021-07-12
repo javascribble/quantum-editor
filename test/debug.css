@@ -2,26 +2,3 @@ body {
     visibility: hidden;
     margin: 0;
 }
-
-#resize {
-    resize: both;
-    overflow: auto;
-}
-
-#ui {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-div[slot="tabs"] {
-    padding: 0.2em 0.3em;
-}
-
-div[slot="tabs"][active] {
-    background: darkgrey;
-}
-
-quantum-engine {
-    height: 300px;
-}
