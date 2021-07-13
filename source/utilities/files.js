@@ -20,30 +20,3 @@ export const loadFile = async file => new Promise((resolve, reject) => {
 // import 'https://unpkg.com/@javascribble/quantum';
 // import 'https://unpkg.com/@javascribble/quantum-input';
 // import 'https://unpkg.com/@javascribble/quantum-engine';
-
-// const { load } = quantum;
-
-// export const plugin = {
-//     load: async engine => {
-//         const { entities, systems, video } = engine;
-
-//         systems.add({
-//             validate: entity => 'plugin' in entity,
-//             construct: entity => {
-
-//             },
-//             destruct: entity => {
-
-//             },
-//             update: (entities, time) => {
-//                 video.draw(drawables);
-//             }
-//         });
-
-//         entities.add(await engine.loadPrototype());
-//     },
-//     unload: engine => {
-//     }
-// };
-
-// document.body.style.visibility = 'visible';
