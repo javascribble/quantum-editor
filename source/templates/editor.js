@@ -10,7 +10,7 @@ export default `
     }
 
     quantum-tabs {
-        width: 33%;
+        width: 50%;
     }
 
     quantum-button {
@@ -22,16 +22,17 @@ export default `
         --color: blue;
         --background-color: aliceblue;
     }
-
+ 
     #container {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         border-left: solid grey 1px;
         height: 100%;
     }
 
-    #content {
+    #view {
         overflow: auto;
         resize: both;
         width: 500px;
@@ -40,15 +41,19 @@ export default `
 </style>
 <quantum-layout>
     <quantum-tabs dock="top">
-        <quantum-button tab="panel1" slot="tabs">MARKUP</quantum-button>
-        <quantum-button tab="panel2" slot="tabs">CODE</quantum-button>
-        <quantum-button tab="panel3" slot="tabs">DATA</quantum-button>
+        <quantum-button tab="panel1" slot="tabs">Markup</quantum-button>
+        <quantum-button tab="panel2" slot="tabs">Code</quantum-button>
+        <quantum-button tab="panel3" slot="tabs">Data</quantum-button>
         <div tab="panel1">test1</div>
         <div tab="panel2">test2</div>
         <div tab="panel3">test3</div>
     </quantum-tabs>
     <div id="container">
-        <div id="content"><slot></slot></div>
+        <div id="controls">
+            <quantum-button>Save</quantum-button>
+            <quantum-button>Download</quantum-button>
+        </div>
+        <div id="view"><slot></slot></div>
     </div>
 </quantum-layout>
 `;
