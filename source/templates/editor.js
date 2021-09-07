@@ -50,8 +50,8 @@ export default `
     </quantum-tabs>
     <div id="container">
         <div id="controls">
-            <quantum-button>Save</quantum-button>
-            <quantum-button>Download</quantum-button>
+            <quantum-button id="save">Save</quantum-button>
+            <quantum-button id="load">Load</quantum-button>
         </div>
         <div id="view"><slot></slot></div>
     </div>

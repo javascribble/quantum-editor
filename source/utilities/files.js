@@ -1,6 +1,6 @@
-export const saveFile = async json => {
+export const saveFile = async text => {
     const link = document.createElement('a');
-    link.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(json)));
+    link.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(text));
     link.setAttribute('download', 'project');
     link.style.display = 'none';
 
@@ -16,7 +16,3 @@ export const loadFile = async file => new Promise((resolve, reject) => {
     fileReader.onload = event => resolve(JSON.parse(event.target.result));
     fileReader.readAsText(file);
 });
-
-// import 'https://unpkg.com/@javascribble/quantum';
-// import 'https://unpkg.com/@javascribble/quantum-input';
-// import 'https://unpkg.com/@javascribble/quantum-engine';
