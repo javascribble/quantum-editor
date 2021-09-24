@@ -1,12 +1,13 @@
 export default `
 <style>
-    quantum-layout {
+    :host {
         height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
-    quantum-layout > * {
-        min-width: min-content;
-        min-height: min-content;
+    quantum-layout {
+        height: 100%;
     }
 
     quantum-tabs {
@@ -18,10 +19,10 @@ export default `
         --cursor: pointer;
     }
 
-    quantum-button:hover {
-        --color: blue;
-        --background-color: aliceblue;
-    }
+        quantum-button:hover {
+            --color: blue;
+            --background-color: aliceblue;
+        }
  
     #container {
         display: flex;
@@ -39,20 +40,29 @@ export default `
         height: 500px;
     }
 </style>
+<div>
+    <span title="save">&#128427;</span>
+    <span title="export">&#128448;</span>
+    <span title="import">&#128449;</span>
+
+    <span title="play">&#9654;</span>
+    <span title="pause">&#10074;&#10074;</span>
+    <span title="stop">&#9209;</span>
+
+    <span title="settings">&#128736;</span>
+</div>
 <quantum-layout>
     <quantum-tabs dock="top">
         <quantum-button tab="panel1" slot="tabs">Markup</quantum-button>
-        <quantum-button tab="panel2" slot="tabs">Code</quantum-button>
-        <quantum-button tab="panel3" slot="tabs">Data</quantum-button>
-        <div tab="panel1">test1</div>
-        <div tab="panel2">test2</div>
-        <div tab="panel3">test3</div>
+        <quantum-button tab="panel2" slot="tabs">Data</quantum-button>
+        <div tab="panel1">test</div>
+        <div tab="panel2">
+            <span title="add">&#43;</span>
+            <span title="delete">&#215;</span>
+            <span title="edit">&#9998;</span>
+        </div>
     </quantum-tabs>
     <div id="container">
-        <div id="controls">
-            <quantum-button id="save">Save</quantum-button>
-            <quantum-button id="load">Load</quantum-button>
-        </div>
         <div id="view"><slot></slot></div>
     </div>
 </quantum-layout>

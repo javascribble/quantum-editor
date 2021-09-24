@@ -6,6 +6,5 @@ import '/node_modules/@javascribble/quantum-tabs/bundles/main.js';
 import '/node_modules/@javascribble/quantum-canvas/bundles/main.js';
 import '/node_modules/@javascribble/quantum-input/bundles/main.js';
 import '/bundles/main.js';
-import './source/game.js';
 
 document.body.style.visibility = 'visible';
