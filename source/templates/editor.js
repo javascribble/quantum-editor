@@ -48,22 +48,20 @@ export default `
     <span title="play">&#9654;</span>
     <span title="pause">&#10074;&#10074;</span>
     <span title="stop">&#9209;</span>
-
-    <span title="settings">&#128736;</span>
 </div>
 <quantum-layout>
     <quantum-tabs dock="top">
         <quantum-button tab="panel1" slot="tabs">Markup</quantum-button>
-        <quantum-button tab="panel2" slot="tabs">Data</quantum-button>
+        <quantum-button tab="panel2" slot="tabs">Code</quantum-button>
+        <quantum-button tab="panel3" slot="tabs">Data</quantum-button>
         <div tab="panel1">test</div>
-        <div tab="panel2">
+        <div tab="panel2">test</div>
+        <div tab="panel3">
             <span title="add">&#43;</span>
             <span title="delete">&#215;</span>
             <span title="edit">&#9998;</span>
         </div>
     </quantum-tabs>
-    <div id="container">
-        <div id="view"><slot></slot></div>
-    </div>
+    <div id="container"><div id="view"><slot></slot></div></div>
 </quantum-layout>
 `;
