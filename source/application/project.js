@@ -1,25 +1,11 @@
 import { saveFile, loadFile } from '../utilities/files.js';
-import { saveJson, loadJson } from '../utilities/json.js';
+import { exportHtml } from '../constants/html.js';
 
-export const configureProject = (root, plugins) => {
-    const load = root.querySelector('#load');
-    const save = root.querySelector('#save');
-    const project = root.querySelector('#project');
+const { getJson, setJson } = quantum;
 
-    const configuration = { project: loadJson('project') || {} };
-    configuration.save = () => saveJson('project', configuration.project);
-    configuration.load = () => engine.run(configuration.project);
-    configuration.load();
+export const configureProject = editor => {
+    const { shadowRoot } = editor;
 
-    project.onchange = () => { };
-    save.onclick = () => saveFile(configuration.project);
-    load.onchange = () => {
-        if (load.files.length > 0) {
-            loadFile(load.files[0]).then(file => {
-                configuration.project = file;
-                configuration.save();
-                configuration.load();
-            });
-        }
-    };
+    shadowRoot.querySelector('#import').onclick = console.log;
+    shadowRoot.querySelector('#export').onclick = () => saveFile(exportHtml('', ''));
 };

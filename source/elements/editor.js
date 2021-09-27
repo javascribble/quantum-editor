@@ -3,11 +3,12 @@ import { configureProject } from '../application/project.js';
 import editor from '../templates/editor.js';
 
 export class Editor extends Quantum {
+    constructor() {
+        super();
+
+        configureLayout(this);
+        configureProject(this);
+    }
 }
 
 Editor.define('quantum-editor', editor);
-
-// import 'https://unpkg.com/@javascribble/quantum/bundles/main-window.js';
-// import 'https://unpkg.com/@javascribble/quantum-input';
-// import 'https://unpkg.com/@javascribble/quantum-canvas';
-// import 'https://unpkg.com/@javascribble/quantum-engine';

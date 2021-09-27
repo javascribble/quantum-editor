@@ -41,13 +41,12 @@ export default `
     }
 </style>
 <div>
-    <span title="save">&#128427;</span>
-    <span title="export">&#128448;</span>
-    <span title="import">&#128449;</span>
-
-    <span title="play">&#9654;</span>
-    <span title="pause">&#10074;&#10074;</span>
-    <span title="stop">&#9209;</span>
+    <span id="save" title="save">&#128427;</span>
+    <span id="export" title="export">&#128448;</span>
+    <span id="import" title="import">&#128449;</span>
+    <span id="play" title="play">&#9654;</span>
+    <span id="pause" title="pause">&#10074;&#10074;</span>
+    <span id="stop" title="stop">&#9209;</span>
 </div>
 <quantum-layout>
     <quantum-tabs dock="top">

@@ -1,14 +1,3 @@
-const { resizeObserver } = quantum;
-
-const saveLayout = element => {
-    resizeObserver.observe(element);
-    element.addEventListener('resize', () => saveStyles(target, observable.properties));
-};
-
-const loadLayout = element => {
-
-};
-
 const enableScaling = (element, target, factor = 1.2) => {
     let scale = 1;
     const applyScale = event => {
@@ -19,6 +8,5 @@ const enableScaling = (element, target, factor = 1.2) => {
     element.addEventListener('wheel', applyScale, { passive: true });
 };
 
-export const configureLayout = (root, selector) => {
-    const elements = root.querySelectorAll(selector);
+export const configureLayout = editor => {
 };
