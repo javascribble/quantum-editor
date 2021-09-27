@@ -1,5 +1,7 @@
 {
     "imports": [
+        "/node_modules/@javascribble/quantum-canvas/bundles/main.js",
+        "/node_modules/@javascribble/quantum-input/bundles/main.js",
         "/test/source/game.js"
     ],
     "templates": [
