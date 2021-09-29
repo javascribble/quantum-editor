@@ -27,15 +27,14 @@ plugins.set('player', {
                 }
             }
         });
-    },
-    unload: () => { }
+    }
 });
 
 plugins.set('world', {
     load: async (bridge, data) => {
-        const { architecture, prototypes } = bridge;
+        const { architecture, prototype } = bridge;
         const { entities } = architecture;
-        const { root } = prototypes;
+        const { root } = prototype;
         const { player, world } = root;
         const { image, size } = world;
 
@@ -74,6 +73,5 @@ plugins.set('world', {
 
         root.children = [world, player];
         entities.add(root);
-    },
-    unload: () => { }
+    }
 });
