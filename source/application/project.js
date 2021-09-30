@@ -1,4 +1,4 @@
-import { saveFile, loadFile } from '../utilities/files.js';
+import { saveFile, loadFile } from '../utilities/file.js';
 
 const { getJson, setJson } = quantum;
 

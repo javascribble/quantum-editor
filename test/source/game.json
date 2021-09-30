@@ -1,91 +1,98 @@
 {
-    "adapters": {
-        "input": {
-            "controls": [
-                "UP",
-                "DOWN",
-                "LEFT",
-                "RIGHT"
-            ],
-            "devices": {
-                "keyboard": {
-                    "UP": 0,
-                    "DOWN": 1,
-                    "LEFT": 2,
-                    "RIGHT": 3
-                }
+    "input": {
+        "controls": [
+            "UP",
+            "DOWN",
+            "LEFT",
+            "RIGHT"
+        ],
+        "devices": {
+            "keyboard": {
+                "UP": 0,
+                "DOWN": 1,
+                "LEFT": 2,
+                "RIGHT": 3
             }
         }
     },
-    "plugins": {
-        "source": {
-            "scriptRoot": "/test/source",
-            "scripts": [
-                "game.js"
-            ],
-            "templateRoot": "/test/source",
-            "templates": [
-                "game.html"
-            ]
-        },
-        "resource": {
-            "resourceRoot": "./resources",
-            "resources": [
-                "character.png",
-                "map.png"
-            ]
-        },
-        "prototype": {
-            "prototypeRoot": 0,
-            "prototypes": [
-                [
-                    {},
-                    {},
-                    {
-                        "player": 3,
-                        "world": 2
-                    }
-                ],
-                [
-                    {
-                        "sx": 0,
-                        "sy": 0,
-                        "sw": 64,
-                        "sh": 64,
-                        "dx": -32,
-                        "dy": -32,
-                        "dw": 64,
-                        "dh": 64
-                    },
-                    {
-                        "image": 0
-                    },
-                    {}
-                ],
-                [
-                    {
-                        "size": 64
-                    },
-                    {
-                        "image": 1
-                    },
-                    {}
-                ],
-                [
-                    {
-                        "transform": {
-                            "translation": {
-                                "x": 100,
-                                "y": 100
-                            }
-                        }
-                    },
-                    {},
-                    {
-                        "sprite": 1
-                    }
+    "source": {
+        "imports": [
+            {
+                "scriptRoot": "/node_modules/",
+                "scripts": [
+                    "@javascribble/quantum-canvas/bundles/main.js",
+                    "@javascribble/quantum-input/bundles/main.js"
                 ]
+            },
+            {
+                "scriptRoot": "/test/source",
+                "scripts": [
+                    "game.js"
+                ]
+            }
+        ],
+        "templateRoot": "./source",
+        "templates": [
+            "game.html"
+        ]
+    },
+    "resource": {
+        "resourceRoot": "./resources",
+        "resources": [
+            "character.png",
+            "map.png"
+        ]
+    },
+    "prototype": {
+        "prototypeRoot": 0,
+        "prototypes": [
+            [
+                {},
+                {},
+                {
+                    "player": 3,
+                    "world": 2
+                }
+            ],
+            [
+                {
+                    "sx": 0,
+                    "sy": 0,
+                    "sw": 64,
+                    "sh": 64,
+                    "dx": -32,
+                    "dy": -32,
+                    "dw": 64,
+                    "dh": 64
+                },
+                {
+                    "image": 0
+                },
+                {}
+            ],
+            [
+                {
+                    "size": 64
+                },
+                {
+                    "image": 1
+                },
+                {}
+            ],
+            [
+                {
+                    "transform": {
+                        "translation": {
+                            "x": 100,
+                            "y": 100
+                        }
+                    }
+                },
+                {},
+                {
+                    "sprite": 1
+                }
             ]
-        }
+        ]
     }
 }
