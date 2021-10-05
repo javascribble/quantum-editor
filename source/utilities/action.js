@@ -1,11 +1,11 @@
-import { storedActions } from '../constants/options.js';
+import { editorOptions } from '../constants/editor.js';
 
 const previous = [];
 const next = [];
 
 export const act = (invoke, reverse) => {
     previous.push({ invoke, reverse });
-    if (previous.length > storedActions) {
+    if (previous.length > editorOptions.storedActions) {
         previous.shift();
     }
 
