@@ -61,6 +61,7 @@ export default `
             <span title="edit">&#9998;</span>
         </div>
     </quantum-tabs>
-    <div id="container"><div id="view"><slot></slot></div></div>
+    <div id="container"><div id="view"><quantum-engine src="./source/game.json"></quantum-engine></div></div>
 </quantum-layout>
+<slot></slot>
 `;

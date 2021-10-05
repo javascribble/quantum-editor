@@ -5,12 +5,12 @@
     "license": "MIT",
     "dependencies": {
         "@javascribble/quantum": "*",
+        "@javascribble/quantum-engine": "*",
         "@javascribble/quantum-button": "*",
         "@javascribble/quantum-layout": "*",
         "@javascribble/quantum-tabs": "*"
     },
     "devDependencies": {
-        "@javascribble/quantum-engine": "*",
         "@javascribble/quantum-canvas": "*",
         "@javascribble/quantum-input": "*",
         "live-server": "*"

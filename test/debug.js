@@ -1,5 +1,4 @@
 import '/node_modules/@javascribble/quantum/bundles/main-window.js';
-import '/node_modules/@javascribble/quantum/bundles/main-extensible.js';
 import '/node_modules/@javascribble/quantum-engine/bundles/main-preset.js';
 import '/node_modules/@javascribble/quantum-engine/bundles/main.js';
 import '/node_modules/@javascribble/quantum-button/bundles/main.js';
