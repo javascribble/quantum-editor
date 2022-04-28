@@ -12,7 +12,7 @@
     },
     "devDependencies": {
         "@javascribble/quantum-canvas": "*",
-        "@javascribble/quantum-input": "*",
+        "@javascribble/quantum-controls": "*",
         "live-server": "*"
     },
     "scripts": {
